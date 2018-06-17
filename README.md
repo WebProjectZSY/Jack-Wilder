@@ -32,7 +32,7 @@
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;二、内容建模    
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;三、超文本建模     
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;四、适应性建模
-### task5
+### task5 
 - 李文琦、武春韬、翟思恒：二、层次架构
 - 董杭、黄致远、彭钺峰：四、面向数据的架构
 - 张荷、唐铭江：一、总述   
