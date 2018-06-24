@@ -14,13 +14,13 @@
 ### task2
 - 黄致远、董杭：六、项目描述    
 - 张荷、唐铭江、彭钺峰：三、功能摘要     
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;五、需求描述    
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;五、需求描述    
 - 李文琦、武春韬：一、项目介绍      
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;四、内容摘要       
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;七、预算          
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;八、团队信息         
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;九、风险评估和指导建议         
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;十、项目计划书总结    
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;四、内容摘要       
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;七、预算          
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;八、团队信息         
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;九、风险评估和指导建议         
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;十、项目计划书总结    
 - 翟思恒：二、项目背景及概述       
 
 （任务分配按最终输出文档格式分块，在此只列出标题，详细内容请对应在仓库中查看，下同）
@@ -46,4 +46,4 @@
 ### task6
 &emsp;&emsp;&emsp;此部分由朱思宇负责设计讲解
 ### task7
-&emsp;&emsp;&emsp;此部分请见[Task6应用设计说明](https://github.com/WebProjectZSY/Jack-Wilder/edit/master/Task6应用设计说明.md)中合并展示
+&emsp;&emsp;&emsp;此部分请见[Task6应用设计说明](https://github.com/WebProjectZSY/Jack-Wilder/blob/master/Task6%E5%BA%94%E7%94%A8%E8%AE%BE%E8%AE%A1%E8%AF%B4%E6%98%8E.md)中合并展示
