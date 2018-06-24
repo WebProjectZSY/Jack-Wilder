@@ -39,3 +39,5 @@
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;三、集成架构
 ### task6
 &emsp;&emsp;&emsp;此部分由朱思宇负责设计讲解
+### task7
+&emsp;&emsp;&emsp;此部分请见[Task6应用设计说明](http://bruce-sha.github.io "不如的博客")中合并展示
