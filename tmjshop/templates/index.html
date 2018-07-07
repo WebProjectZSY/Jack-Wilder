@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>服装商城</title>
+        <style type='text/css'>
+            td{
+              padding: 0;
+            }
+
+            .td_a{
+              height: 100%;
+              width: 100%;
+              display: block;
+              border:  5px solid black;
+            }
+            .container{
+                width: 100%;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                white-space: nowrap;
+            }
+            .container .item{
+                display:inline-block;
+                box-sizing: border-box;
+                width:33%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center" onclick=javascript:location.href='/index'>服装商城</h1>
+        <p align="center" style="border:0px;margin:0">
+        {% if user_logined %}
+        <span style="float:right"><a href='/logout'>登出</a></span>
+        <span style="float:right">&nbsp;&nbsp;&nbsp;</span>
+        <span style="float:right"><a href='/profile'>{{username}}</a></span>
+        <span style="float:right">&nbsp;&nbsp;&nbsp;</span>
+        <span style="float:right"><a href='/shopcar'>购物车({{shopcar_num}})</a></span>
+        
+        
+        {% else %}
+        <span style="float:right"><a href='/register'>注册</a></span><span style="float:right">&nbsp;&nbsp;&nbsp;</span>
+        <span style="float:right"><a href='/login'>登入</a></span>
+        {% endif %}
+        </p>
+        <br />
+        <hr />
+        <p align="center"> 本商城出售各种服装</p>
+        <br />
+        <br />
+        <h1 align="center">最新商品</h1>
+        <hr />
+        
+        <div class="container">
+            {% for good in goods %}
+            <div class="item">
+            <a href='/good/{{good.id}}'><img class="aligncenter" height=480px src='/static/{{good.good_img_path}}' /><a>
+            <li>{{good.good_name}}</li>
+            <li>{{good.good_price}} RMB</li>
+            <li>{{good.good_desc}}</li>
+            </div>
+            {% endfor %}
+        </div>
+        
+    </body>
+</html>

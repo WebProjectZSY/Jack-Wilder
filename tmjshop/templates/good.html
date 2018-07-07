@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>服装商城</title>
+    </head>
+    <body>
+        <style type="text/css" media="screen">
+            .aligncenter{
+                clear:both;
+                display:block;
+                margin:auto;
+            }
+        </style>
+        <h1 align="center" onclick=javascript:location.href='/index'>服装商城</h1>
+        <p align="center" style="border:0px;margin:0">
+        {% if user_logined %}
+        <span style="float:right"><a href='/logout'>登出</a></span>
+        <span style="float:right">&nbsp;&nbsp;&nbsp;</span>
+        <span style="float:right"><a href='/profile'>{{username}}</a></span>
+        <span style="float:right">&nbsp;&nbsp;&nbsp;</span>
+        <span style="float:right"><a href='/shopcar'>购物车({{shopcar_num}})</a></span>
+        {% else %}
+        <span style="float:right"><a href='/register'>注册</a></span><span style="float:right">&nbsp;&nbsp;&nbsp;</span>
+        <span style="float:right"><a href='/login'>登入</a></span>
+        {% endif %}
+        </p>
+        <br />
+        <hr />
+        <div align="center">
+            <span>
+            <a href='/good/{{good.id}}'><img class="aligncenter" height=480px src='/static/{{good.good_img_path}}' /><a>
+            <li>商品名称:{{good.good_name}}</li>
+            <li>商品价格:{{good.good_price}}RMB</li>
+            <li>商品详情:{{good.good_desc}}</li>
+            </span>
+            <form action="/addshopcar" method="POST" accept-charset="utf-8" enctype="multipart/form-data">
+            <input type="hidden" name="good_id" value="{{good.id}}"/>
+            <input type="submit" name="submit" value="加入购物车"/> 
+            </form>
+        </div>
+        <center></center>
+    </body>
+</html>

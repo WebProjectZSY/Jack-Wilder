@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>服装商城</title>
+    </head>
+    <body>
+        <style type="text/css" media="screen">
+            .aligncenter{
+                clear:both;
+                display:block;
+                margin:auto;
+            }
+        </style>
+        <h1 align="center" onclick=javascript:location.href='/index'>服装商城</h1>
+        <hr />
+        <img class="aligncenter" height=480px src='static/logo.png' />
+        <form action="/login" method="POST" accept-charset="utf-8" enctype="multipart/form-data">
+            <div align="center">
+                <p align="center">登一下人家嘛~~</p>
+                <table>
+                <tr>
+                    <td>用户名:</td><td><input type="text" name="username" width=1000px /></td>
+                </tr>
+                <tr>
+                    <td>密码:</td><td><input type="password" name="password" width=500px /></td>
+                </tr>
+                </table>
+            </div>
+            <p align="center">
+            <input type="submit" name="login" value="登陆"/> 
+            <span onclick=javascript:location.href='/register'>去注册</span>
+            </p>
+        </form>
+        <center>{{info}}</center>
+    </body>
+</html>
