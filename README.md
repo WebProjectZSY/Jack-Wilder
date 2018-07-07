@@ -46,6 +46,12 @@
 ### task6
 &emsp;&emsp;&emsp;此部分由朱思宇负责设计讲解
 ### task7
-&emsp;&emsp;&emsp;此部分请见[Task6应用设计说明](https://github.com/WebProjectZSY/Jack-Wilder/blob/master/Task6%E5%BA%94%E7%94%A8%E8%AE%BE%E8%AE%A1%E8%AF%B4%E6%98%8E.md)中合并展示          
+&emsp;&emsp;&emsp;此部分请见[Task6应用设计说明](https://github.com/WebProjectZSY/Jack-Wilder/blob/master/Task6%E5%BA%94%E7%94%A8%E8%AE%BE%E8%AE%A1%E8%AF%B4%E6%98%8E.md)中合并展示      
+### task8
+&emsp;&emsp;由翟思恒编写。
+### task9
+&emsp;&emsp;由翟思恒编写。
+### task12
+&emsp;&emsp;由张荷编写。
           
 &emsp;&emsp;&emsp;本项目租用新浪云SAE为服务器，未配置本地服务器。在云技术发展如此迅猛的今天，使用云服务器方便快捷，成本低廉，今后可以根据需要更换更好的服务器。可[点击此处](http://5.shopsmart.applinzi.com/)进行预览。因交互完成度不高，有些地方只有部分展示功能，如何操作请见[Task6应用设计说明](https://github.com/WebProjectZSY/Jack-Wilder/blob/master/Task6%E5%BA%94%E7%94%A8%E8%AE%BE%E8%AE%A1%E8%AF%B4%E6%98%8E.md)，更多功能请各位自行探索，未来我们会不断更新版本，完善功能。再次感谢各位！
