@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>支付成功</title>
+        <link rel="shortcut icon" href="static/s.ico">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+        <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+    <table class="table table-striped">
+        <h2 align="center">您一共购买了{{num}}件东西</h2>
+        <thead>
+            <tr>
+                <th>商品名</th>
+                <th>价格</th>
+                <th>数量</th>
+                <th>购买时间</th>
+            </tr>
+        </thead>
+        {% for good in purchased_goods %}
+        <tbody>
+            <tr>
+                <td style="cursor:pointer" onclick="location.href='/good/{{good.id}}'">{{good.good_name}}</td>
+                <td>{{good.good_price}} RMB</td>
+                <td>1</td>
+                <td>{{good.date | datetime}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <div class=" col-md-3 pull-right">
+        <h4>余额: {{balance}}RMB</h4>
+        <br>
+        <a href="/">返回主页</a>
+        </body>
+    </div>
+    
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>注册</title>
+        <link rel="shortcut icon" href="static/s.ico">
+        <style type="text/css" media="screen">
+            .aligncenter{
+                clear:both;
+                display:block;
+                margin:auto;
+            }
+            body{
+                background-image: url("/static/Choices.jpg");
+                background-repeat: no-repeat;
+                background-attachment:fixed;
+                background-position:center;
+                background-size:cover;
+            }
+        </style> 
+    </head>
+    <body>
+        
+        <h1 align="left" style="font-size: 50px" onclick=javascript:location.href='/index'><img src="static/smart.png"></h1>
+        <hr />
+        <!-- <img class="aligncenter" align="left" height=480px src='../static/u341.jpg' /> -->
+        <form action="/register" method="POST" accept-charset="utf-8" enctype="multipart/form-data" style=" text-align: center;border:1px solid #006600;display:block;position:fixed;top:200px;right:200px;width:300px;height:350px;background-color: white;" >
+            <h2 align="center">注册</h2>
+            <input style = "height:30px;width:270px" type="text" value="" placeholder="用户名" name = "username"/>
+            <br>
+            <br>
+            <input style = "height:30px;width:270px" type="password" value="" placeholder = "密码" name = "password"/>
+            <br>
+            <br>
+            <input style = "height:30px;width:270px" type="text" value="" placeholder = "E-mail" name = "email"/>
+            <br>
+             <br>
+             <input type="submit" name="register" style="visibility: visible;height:30px;width:270px"value="注     册"/> 
+        </form>
+        <center>
+            {% for error in errors %}
+                <li>{{error}}</li>
+            {% endfor %}
+        </center>
+    </body>
+</html>

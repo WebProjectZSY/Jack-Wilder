@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>商品预览</title>
+
+        <link rel="shortcut icon" href="/static/s.ico">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+        <style type="text/css" media="screen">
+            *{
+                padding: 0;
+                margin: 0;
+                font-family: "微软雅黑";
+            }
+            .cen{
+                width: 500px;
+                height: 610px;
+                margin: 0 auto;
+                box-shadow: 5px 5px 5px gray;
+                border: 1px solid #ccc;
+                margin: 80px auto;
+            }
+            .aligncenter{
+                clear:both;
+                display:block;
+                margin:auto;
+            }
+            #banner {
+                background: #333333;
+                width: 100%;
+                height: 50px;
+            }
+            #ti {
+                float: left;
+                color: white;
+            }
+            a {
+                cursor: pointer;
+                text-decoration: none;
+            }
+            #desc{
+                width: 500px;
+                margin: 0 auto 0;
+                padding: 20px 40px;
+            }
+            #desc li{
+                list-style: none;
+                font-size: 18px;
+                text-align:left;
+            }
+            #good_id{
+
+            }
+            a:link {
+                text-decoration: none;
+            }
+            a:visited {
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: none;
+            }
+            a:active {
+                text-decoration: none;
+            }
+            .footer {
+                line-height: 50px;
+                display: block;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 50px;
+                background: #333333;
+                text-align: center;
+                color: white;
+            }
+            body{
+                background-image: url("/static/Choices.jpg");
+                background-repeat: no-repeat;
+                background-attachment:fixed;
+                background-position:center;
+                background-size:cover;
+            }
+        </style>
+    </head>
+    <body style="overflow-y: hidden;">
+    <div id="banner">
+        <h1 align="center" onclick=javascript:location.href='/index' style="cursor: pointer;" id="ti"><img src="/static/smart.png" width="100px" height="50px"></h1>
+        <p align="center" style="border:0px;margin:0">
+            {% if user_logined %}
+            <span style="float:right;line-height: 50px;"><a href='/logout'>登出</a></span>
+            <span style="float:right;line-height: 50px;">&nbsp;&nbsp;&nbsp;</span>
+            <span style="float:right;line-height: 50px;"><a href='/profile'>{{username}}</a></span>
+            <span style="float:right;line-height: 50px;">&nbsp;&nbsp;&nbsp;</span>
+            <span style="float:right;line-height: 50px;"><a href='/shopcar'>购物车({{shopcar_num}})</a></span>
+            {% else %}
+            <span style="float:right;line-height: 50px;"><a href='/register'>注册</a></span><span style="float:right">&nbsp;&nbsp;&nbsp;</span>
+            <span style="float:right;line-height: 50px;"><a href='/login'>登入</a></span>
+            {% endif %}
+        </p>
+    </div>
+        <div align="center" class="cen">
+            <div id="desc">
+                <a href='/good/{{good.id}}'><img class="aligncenter" height=480px width=420px src='/static/{{good.good_img_path}}' /><a>
+                <p style="height: 5px;margin-bottom: 0;"></p>
+                <li>商品名称:{{good.good_name}}</li>
+                <li>商品价格:{{good.good_price}}RMB</li>
+                <li>商品详情:{{good.good_desc}}</li>
+            </div>
+            <br>
+            <br>
+            <form action="/addshopcar" method="POST" accept-charset="utf-8" enctype="multipart/form-data">
+                <input id="good_id" type="hidden" name="good_id" value="{{good.id}}"/>
+                <input class="btn btn-outline-success" type="submit" name="submit" value="加入购物车"/> 
+            </form>
+        </div>
+    <div class="footer">
+        <p>web 版权所有 &copy; Xidian UNIVERSITY</p>
+    </div>
+    </body>
+</html>

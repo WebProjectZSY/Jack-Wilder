@@ -1,0 +1,457 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Smart</title>
+        <link rel="shortcut icon" href="static/s.ico">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <script  src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+        <style type='text/css'>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+
+			body,h1,p {
+				font-family: "微软雅黑";
+			}
+
+			#ti {
+				float: left;
+				color: white;
+			}
+
+			#banner {
+				background: #333333;
+				width: 100%;
+				height: 50px;
+			}
+
+			td {
+				padding: 0;
+			}
+
+			.td_a {
+				height: 100%;
+				width: 100%;
+				display: block;
+				border: 5px solid black;
+			}
+
+			.container {
+				width: 100%;
+				overflow-x: scroll;
+				overflow-y: hidden;
+				white-space: nowrap;
+			}
+
+			.container .item {
+				display: inline-block;
+				box-sizing: border-box;
+				width: 33%;
+			}
+
+			.container .item li {
+				list-style: none;
+			}
+
+			.Choices {
+				height: 800px;
+			}
+
+			.footer {
+				line-height: 50px;
+				display: block;
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				height: 50px;
+				background: #333333;
+				text-align: center;
+				color: white
+			}
+
+			@charset "utf-8";
+			/* CSS Document */
+			html,body,img {
+				margin: 0;
+				padding: 0;
+				display: block;
+				font-family: '微软雅黑';
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+				-khtml-user-select: none;
+				user-select: none;
+			}
+			a {
+				cursor: pointer;
+				text-decoration: none;
+			}
+
+			ul li {
+				list-style: none;
+			}
+			/*选择开始*/
+			.Choices {
+				width: 100%;
+				float: left;
+				height: 819px;
+				background: url(/static/Choices.jpg) no-repeat center;
+				background-size: cover;
+				margin-top: 60px;
+			}
+
+			.Choices_text {
+				width: 1200px;
+				height: 819px;
+				margin: 0 auto;
+			}
+
+			.Choices_head {
+				width: 100%;
+				float: left;
+				height: 55px;
+				margin-top: 50px;
+				line-height: 55px;
+				letter-spacing: 2px;
+				font-weight: bold;
+				text-align: center;
+				font-size: 48px;
+				color: #FFF;
+				display: block;
+				position: relative;
+			}
+
+			.Choices_head:before,.Choices_head:after {
+				content: '';
+				position: absolute;
+				top: 30px;
+				background: #FFF;
+				width: 265px;
+				height: 2px;
+			}
+
+			.Choices_head:before {
+				left: 175px;
+			}
+
+			.Choices_head:after {
+				right: 175px;
+			}
+
+			.Choices_content {
+				width: 1184px;
+				height: 594px;
+				float: left;
+				margin-left: 3px;
+			}
+
+			.Choicesnext {
+				width: 38px;
+				height: 37px;
+				float: left;
+				margin-left: 1136px;
+				margin-top: 24px;
+				cursor: pointer;
+			}
+
+			.Choices_banner {
+				width: 1184px;
+				height: 399px;
+				float: left;
+				margin-top: 39px;
+				overflow: hidden;
+			}
+
+			.Choices_banner ul {
+				width: 12000px;
+				overflow: hidden;
+			}
+
+			.Choices_banner ul li {
+				width: 1184px;
+				height: 399px;
+				float: left;
+			}
+
+			.Choices_left {
+				width: 594px;
+				height: 399px;
+				float: left;
+			}
+
+			.Choices_right {
+				width: 590px;
+				height: 399px;
+				float: left;
+				background-color: rgba(255,255,255,0.93);
+                padding-top: 70px;
+			}
+
+
+			.Choices_right h1 {
+				width: 590px;
+				height: 30px;
+				line-height: 30px;
+				float: left;
+				text-align: center;
+				font-size: 28px;
+				margin-top: 70px;
+				color: #464646;
+			}
+
+			.Choices_right h2 {
+				width: 590px;
+				height: 30px;
+				line-height: 30px;
+				float: left;
+				text-align: center;
+				font-size: 28px;
+				margin-top: 10px;
+				color: #464646;
+			}
+
+			.Choices_right p {
+				width: 450px;
+				height: 70px;
+				float: left;
+				margin-left: 70px;
+				text-align: center;
+				font-size: 18px;
+				color: #606060;
+				margin-top: 20px;
+			}
+
+			.Choicesbut {
+				width: 197px;
+				height: 49px;
+				float: left;
+				border: 1px solid #bfbfbf;
+				background-color: rgba(255,255,255,0.7);
+				text-align: center;
+				line-height: 49px;
+				color: #606060;
+				font-size: 22px;
+				margin-left: 195px;
+				margin-top: 57px;
+			}
+			a:link {
+				text-decoration: none;
+			}
+			a:visited {
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: none;
+			}
+			a:active {
+			 	text-decoration: none;
+			}
+			.Choicestel {
+				width: 1184px;
+				height: 38px;
+				text-align: center;
+				line-height: 38px;
+				font-size: 36px;
+				float: left;
+				font-family: "Arial";
+				overflow: hidden;
+				color: #FFF;
+				margin-top: 80px;
+				-webkit-user-select: none;
+			/*谷歌 /Chrome*/
+				-moz-user-select: none;
+			 /*火狐/Firefox*/
+				-ms-user-select: none;
+			    /*IE 10+*/
+				user-select: none;
+			}
+
+			.Choicestel ul {
+				width: 12000px;
+				overflow: hidden;
+			}
+
+			.Choicestel ul li {
+				width: 1184px;
+				height: 38px;
+				float: left;
+			}
+			/*选择结束*/
+			.loading{
+				width: 100%;
+				height: 100%;
+				position:fixed;
+				z-index: 100;
+				top: 0;
+				left: 0;
+				background: #fff;
+			}
+			.loading .pic{
+				width: 0%;
+				height: 4px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				background: #f33;
+			}	
+			.center{
+				text-align: center;
+				width: 100%;
+				margin: 4px auto;
+			}
+
+        </style>
+    </head>
+    <body style="overflow-y:hidden;"">
+    <div class="loading">
+		<div class="pic">	
+		</div>
+	</div>
+    <div id="banner">
+        <h1 align="center" onclick=javascript:location.href='/index' style="cursor: pointer;" id="ti"><img src="static/smart.png" width="100px" height="50px"></h1>
+        <p align="center" style="border:0px;margin:0">
+        	{% if user_logined %}
+        	<span style="float:right;line-height: 50px;"><a href='/logout'>登出</a></span>
+        	<span style="float:right;line-height: 50px;">&nbsp;&nbsp;&nbsp;</span>
+        	<span style="float:right;line-height: 50px;"><a href='/profile'>{{username}}</a></span>
+        	<span style="float:right;line-height: 50px;">&nbsp;&nbsp;&nbsp;</span>
+        	<span style="float:right;line-height: 50px;"><a href='/shopcar'>购物车({{shopcar_num}})</a></span>
+        
+        
+        	{% else %}
+        	<span style="float:right;line-height: 50px;"><a href='/register'>注册</a></span><span style="float:right">&nbsp;&nbsp;&nbsp;</span>
+        	<span style="float:right;line-height: 50px;"><a href='/login'>登入</a></span>
+        	{% endif %} 
+        </p>
+    </div>
+        <!-- <h1 align="center">最新商品</h1> -->
+        
+        <!-- <div class="container">
+            {% for good in goods %}
+            <div class="item">
+            <a href='/good/{{good.id}}'><img class="aligncenter" height=480px src='/static/{{good.good_img_path}}' /><a>
+            <li>{{good.good_name}}</li>
+            <li>{{good.good_price}} RMB</li>
+            <li>{{good.good_desc}}</li>
+            </div>
+            {% endfor %}
+        </div> -->
+
+		<div class="Choices">
+	   <div class="Choices_text">
+    	<div class="Choices_head">最新商品</div>
+        <div class="Choices_content">
+        	<div class="Choicesnext"><img src="static/Choicesnext.png" width="100%"></div>
+            <div class="Choices_banner">
+            	<ul>
+                	<li>
+                    	<div class="Choices_left">
+                        <a href='/good/{{goods[0].id}}'>
+                            <img src="static/1.jpg" width="100%"></div>
+                        </a>
+                        <div class="Choices_right">
+                        	<h2>{{goods[0].good_name}}</h2>
+                            <h2>{{goods[0].good_price}}</h2>
+                            <h2>{{goods[0].good_desc}}</h2>
+                            <div class="Choicesbut"><a href='/good/{{goods[0].id}}'>查看详情</a></div>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="Choices_left">
+                        <a href='/good/{{goods[1].id}}'>
+                            <img src="static/2.jpg" width="100%"></div>
+                        </a>
+                        <div class="Choices_right">
+                        	<h2>{{goods[1].good_name}}</h2>
+                            <h2>{{goods[1].good_price}}</h2>
+                            <h2>{{goods[1].good_desc}}</h2>
+                            <div class="Choicesbut"><a href='/good/{{goods[1].id}}'>查看详情</a></div>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="Choices_left">
+                        <a href='/good/{{goods[2].id}}'>
+                            <img src="static/3.jpg" width="100%"></div>
+                        </a>
+                        <div class="Choices_right">
+                        	<h2>{{goods[2].good_name}}</h2>
+                            <h2>{{goods[2].good_price}}</h2>
+                            <h2>{{goods[2].good_desc}}</h2>
+                            <div class="Choicesbut"><a href='/good/{{goods[2].id}}'>查看详情</a></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="Choicestel">
+            	<ul>
+                	<li><01/03></li>
+                    <li><02/03></li>
+                    <li><03/03></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function() {
+	$('.Choicesnext').click(function() {
+		$(".Choices_banner ul").animate({
+			marginLeft: "-1184px"
+		}, 600, function() {
+			$(".Choices_banner ul>li").eq(0).appendTo($(".Choices_banner ul"));
+			$(".Choices_banner ul").css('marginLeft', '0px');
+		});
+		$(".Choicestel ul").css('marginLeft', '-1184px');
+		$(".Choicestel ul>li").eq(0).appendTo($(".Choicestel ul"));
+		$(".Choicestel ul").css({
+			marginLeft: "0px"
+		}, 600);
+	})
+/*$('.Choicesprev').click(function () {  
+            $(".Choices_banner ul").css('marginLeft','-1184px');  
+            $(".Choices_banner ul>li").eq(3).prependTo($(".Choices_banner ul"));  
+            $(".Choices_banner ul").animate({marginLeft:"0px"},600);  
+            $(".Choicestel ul").css('marginLeft','-1184px');  
+            $(".Choicestel ul>li").eq(3).prependTo($(".Choicestel ul"));  
+            $(".Choicestel ul").css({marginLeft:"0px"},600);  
+        })  */
+})
+
+$(function() {
+	function Choices() {
+		$(".Choices_banner ul").animate({
+			marginLeft: "-1184px"
+		}, 600, function() {
+			$(".Choices_banner ul>li").eq(0).appendTo($(".Choices_banner ul"));
+			$(".Choices_banner ul").css('marginLeft', '0px');
+		});
+		$(".Choicestel ul").css('marginLeft', '-1184px');
+		$(".Choicestel ul>li").eq(0).appendTo($(".Choicestel ul"));
+		$(".Choicestel ul").css({
+			marginLeft: "0px"
+		}, 600);
+	}
+	setInterval("Choices()", "3000");
+	var tabChange = setInterval(Choices, 3000);
+	//鼠标悬停暂停切换
+	$('.Choicesnext').mouseover(function() {
+		clearInterval(tabChange);
+	});
+	$('.Choicesnext').mouseout(function() {
+		tabChange = setInterval(Choices, 3000);
+	});
+})
+	$(".loading .pic").animate({width:"100%"},100,function(){
+		$(".loading").fadeOut();
+	});
+
+</script>
+<div class="footer">
+    <p>web 版权所有 &copy; Xidian UNIVERSITY</p>
+</div>
+</body>
+</html>

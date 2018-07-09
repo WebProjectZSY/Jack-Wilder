@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="refresh" content="5;url=/index" /> 
+        <title>支付信息</title>
+        <link rel="shortcut icon" href="static/s.ico">
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <style type="text/css" media="screen">
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            .aligncenter{
+                clear:both;
+                display:block;
+                margin:auto;
+            }
+            body{
+                font-family: "微软雅黑";
+            }
+            .loading{
+                width: 100%;
+                height: 100%;
+                position:fixed;
+                z-index: 100;
+                top: 0;
+                left: 0;
+                background: #fff;
+            }
+            .loading .pic{
+                width: 64px;
+                height: 64px;
+                background-image: url(static/loading.gif);
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin:auto;
+            }
+            #center{    
+                text-align: center;
+                margin:100px auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="center"><img src="static/smart.png" alt="商城logo"><p>{{info}}</p></div>
+
+        <script type="text/javascript">
+        $(function(){
+            var loading = '<div class="loading"><div class="pic"></div></div>';
+            $("body").append(loading);
+            setInterval(function(){
+                $(".loading").fadeOut();
+            },2000);
+        })
+    </script>
+    </body>
+</html>
